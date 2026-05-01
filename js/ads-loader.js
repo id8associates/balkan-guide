@@ -1,5 +1,5 @@
 /**
- * Balkan Tourism — Ads Loader
+ * Balkan Guide — Ads Loader
  * 
  * Handles loading and initialization of display advertising
  * Supports Google AdSense and other ad networks

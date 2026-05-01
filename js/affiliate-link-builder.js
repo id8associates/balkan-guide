@@ -1,5 +1,5 @@
 /**
- * Balkan Tourism — Affiliate Link Builder
+ * Balkan Guide — Affiliate Link Builder
  * 
  * Generates affiliate tracking links for various programs
  * Handles click tracking and analytics

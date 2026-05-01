@@ -1,5 +1,5 @@
 /**
- * Balkan Tourism — Shared Global JS
+ * Balkan Guide — Shared Global JS
  * Loaded on EVERY page. Handles navigation, side panel, common UI.
  */
 

@@ -1,4 +1,4 @@
-# Balkan Tourism — robots.txt
+# Balkan Guide — robots.txt
 User-agent: *
 Allow: /
 Disallow: /security/

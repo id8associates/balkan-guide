@@ -1,5 +1,5 @@
 /**
- * Balkan Tourism — Analytics Initialization
+ * Balkan Guide — Analytics Initialization
  * 
  * This file initializes Google Analytics and Microsoft Clarity
  * Load this on every page after the configuration files

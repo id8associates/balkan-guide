@@ -1,5 +1,5 @@
 /**
- * Balkan Tourism — Email Signup Handler
+ * Balkan Guide — Email Signup Handler
  * 
  * Handles email subscription forms and integration with email service providers
  * Supports Mailchimp, ConvertKit, and Sendinblue

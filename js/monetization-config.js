@@ -1,5 +1,5 @@
 /**
- * Balkan Tourism — Global Monetization Configuration
+ * Balkan Guide — Global Monetization Configuration
  * 
  * This file contains all monetization settings that apply across all countries.
  * Each country can override these settings in their country-specific monetization.js

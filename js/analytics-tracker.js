@@ -1,5 +1,5 @@
 /**
- * Balkan Tourism — Analytics Tracker
+ * Balkan Guide — Analytics Tracker
  * 
  * Handles all analytics and event tracking
  * Integrates with Google Analytics and custom tracking
