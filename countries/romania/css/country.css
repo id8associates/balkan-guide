@@ -1,0 +1,18 @@
+/* ============================================================
+   Romania — Country-specific CSS overrides
+   ============================================================ */
+
+:root {
+  --country-accent: #002B7F; /* Romania flag blue */
+}
+
+.hero-title {
+  background: linear-gradient(135deg, #002B7F, #CE1126, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.custom-marker {
+  background: linear-gradient(135deg, #002B7F, var(--accent));
+}

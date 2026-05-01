@@ -1,0 +1,18 @@
+/* ============================================================
+   North Macedonia — Country-specific CSS overrides
+   ============================================================ */
+
+:root {
+  --country-accent: #CE1021; /* North Macedonia flag red */
+}
+
+.hero-title {
+  background: linear-gradient(135deg, #CE1021, #D4A017, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.custom-marker {
+  background: linear-gradient(135deg, #CE1021, var(--accent));
+}

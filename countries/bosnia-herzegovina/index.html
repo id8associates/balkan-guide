@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Bosnia and Herzegovina — Balkan Tourism</title>
+  <meta name="description" content="Explore Bosnia and Herzegovina — ancient bridges, Ottoman bazaars, stunning waterfalls, and warm hospitality in the heart of the Balkans.">
+  <link rel="canonical" href="/bosnia-herzegovina">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+  <!-- Global Shared CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <!-- Country-specific CSS overrides -->
+  <link rel="stylesheet" href="css/country.css">
+</head>
+<body>
+
+  <!-- ═══ Header ═══ -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="flag-container" aria-label="Balkan Tourism Home">
+        <svg viewBox="0 0 16 8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <rect width="16" height="8" fill="#002395"/>
+          <path d="m4.24,0h8v8z" fill="#FECB00"/>
+          <g id="star-g">
+            <path d="M2.353283,0.5248529 2.8,-0.85 3.246717,0.524853 2.077197,-0.324853H3.522803z" fill="#fff" id="star-s"/>
+            <use xlink:href="#star-s" x="1" y="1"/>
+            <use xlink:href="#star-s" x="2" y="2"/>
+          </g>
+          <use xlink:href="#star-g" x="3" y="3"/>
+          <use xlink:href="#star-g" x="6" y="6"/>
+        </svg>
+      </a>
+      <div>
+        <a href="/" class="site-title">Balkan Tourism <span class="country-name">· Bosnia &amp; Herzegovina</span></a>
+        <p class="site-subtitle">Land of Natural Beauty</p>
+      </div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep">›</span>
+        <span class="current">Bosnia &amp; Herzegovina</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══ Hamburger Menu ═══ -->
+  <button class="hamburger-menu" id="hamburgerMenu" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- ═══ Navigation Slide-Out ═══ -->
+  <nav class="nav-menu" id="navMenu">
+    <h3>Destinations</h3>
+    <div class="nav-item" data-place="bascarsija">Sarajevo – Baščaršija</div>
+    <div class="nav-item" data-place="stari-most">Mostar – Stari Most</div>
+    <div class="nav-item" data-place="kravice">Kravice Waterfalls</div>
+    <div class="nav-item" data-place="blagaj">Blagaj Tekke</div>
+    <div class="nav-item" data-place="pocitelj">Počitelj</div>
+    <div class="nav-item" data-place="medjugorje">Međugorje</div>
+    <div class="nav-item" data-place="mehmed-pasa">Višegrad Bridge</div>
+    <div class="nav-item" data-place="sutjeska">Sutjeska National Park</div>
+    <div class="nav-item" data-place="una-np">Una National Park</div>
+    <div class="nav-item" data-place="banja-luka">Banja Luka</div>
+    <div class="nav-item" data-place="jahorina">Jahorina Mountain</div>
+    <div class="nav-item" data-place="trebinje">Trebinje</div>
+    <div class="nav-item" data-place="neum">Neum</div>
+    <div class="nav-item" data-place="jajce">Jajce</div>
+    <div class="nav-item" data-place="travnik">Travnik</div>
+    <div class="nav-item" data-place="vjetrenica">Vjetrenica Cave</div>
+    <div class="nav-item" data-place="boracko">Boračko Lake</div>
+    <div class="nav-item" data-place="srebrenica">Srebrenica</div>
+    <div class="nav-item" data-place="lukomir">Lukomir</div>
+    <div class="nav-divider"></div>
+    <a href="/" class="nav-home-link">← All Countries</a>
+  </nav>
+
+  <!-- ═══ Side Detail Panel ═══ -->
+  <div class="side-panel" id="sidePanel">
+    <button class="side-panel-close" id="sidePanelClose" aria-label="Close">&times;</button>
+    <div id="sidePanelContent"></div>
+  </div>
+
+  <!-- ═══ Main Content ═══ -->
+  <main class="main-container">
+    <section class="hero-section glass">
+      <h2 class="hero-title">Discover Bosnia and Herzegovina</h2>
+      <p class="hero-description">
+        Explore the heart of the Balkans where East meets West, ancient traditions blend with modern life.
+      </p>
+    </section>
+
+    <section class="getting-there-section glass">
+      <h3 class="section-title">Getting There</h3>
+      <div class="getting-there-content">
+        <div class="airports-info">
+          <h4>✈️ Main Airports</h4>
+          <ul>
+            <li><strong>Sarajevo International Airport (SJJ)</strong> - The main gateway, 10km from city center</li>
+            <li><strong>Tuzla International Airport (TZL)</strong> - Budget airline hub, 15km from Tuzla</li>
+            <li><strong>Mostar International Airport (OMO)</strong> - Small airport, seasonal flights</li>
+            <li><strong>Banja Luka International Airport (BNX)</strong> - Northern Bosnia gateway</li>
+          </ul>
+        </div>
+        <div class="airfare-links">
+          <h4>🔍 Book Your Flight</h4>
+          <p class="airfare-subtitle">Compare prices and find the best deals</p>
+          <div class="airfare-buttons">
+            <a href="https://www.skyscanner.net/" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">✈️</span>
+              <span class="airfare-name">Skyscanner</span>
+              <span class="airfare-tag">Compare</span>
+            </a>
+            <a href="https://www.kiwi.com/" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">🌍</span>
+              <span class="airfare-name">Kiwi</span>
+              <span class="airfare-tag">Budget</span>
+            </a>
+            <a href="https://www.google.com/travel/flights" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">🔍</span>
+              <span class="airfare-name">Google Flights</span>
+              <span class="airfare-tag">Search</span>
+            </a>
+            <a href="https://www.expedia.com/Flights" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">🏨</span>
+              <span class="airfare-name">Expedia</span>
+              <span class="airfare-tag">Packages</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section glass">
+      <h3 class="map-title">Interactive Tourism Map</h3>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <!-- ═══ Scripts ═══ -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="" crossorigin=""></script>
+  <script src="/js/monetization-config.js"></script>
+  <script src="js/monetization.js"></script>
+  <script src="/js/analytics-init.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/country.js"></script>
+</body>
+</html>

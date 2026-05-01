@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Kosovo — Balkan Tourism</title>
+  <meta name="description" content="Explore Kosovo — a young nation with ancient heart, medieval monasteries, stunning mountain landscapes, and vibrant Balkan culture.">
+  <link rel="canonical" href="/kosovo">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+  <!-- Global Shared CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <!-- Country-specific CSS overrides -->
+  <link rel="stylesheet" href="css/country.css">
+</head>
+<body>
+
+  <!-- ═══ Header ═══ -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="flag-container" aria-label="Balkan Tourism Home">
+        <img src="/flags/kosovo.svg" alt="Flag of Kosovo" style="height:32px;width:auto;border-radius:4px;">
+      </a>
+      <div>
+        <a href="/" class="site-title">Balkan Tourism <span class="country-name">· Kosovo</span></a>
+        <p class="site-subtitle">Young Heart of the Balkans</p>
+      </div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep">›</span>
+        <span class="current">Kosovo</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══ Hamburger Menu ═══ -->
+  <button class="hamburger-menu" id="hamburgerMenu" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- ═══ Navigation Slide-Out ═══ -->
+  <nav class="nav-menu" id="navMenu">
+    <h3>Destinations</h3>
+    <div class="nav-item" data-place="pristina">Pristina</div>
+    <div class="nav-item" data-place="prizren">Prizren</div>
+    <div class="nav-item" data-place="peja">Peja</div>
+    <div class="nav-item" data-place="gjakova">Gjakova</div>
+    <div class="nav-item" data-place="mitrovica">Mitrovica</div>
+    <div class="nav-item" data-place="ferizaj">Ferizaj</div>
+    <div class="nav-item" data-place="gjilan">Gjilan</div>
+    <div class="nav-item" data-place="decani">Visoki Dečani Monastery</div>
+    <div class="nav-item" data-place="patriarchate">Patriarchate of Peć</div>
+    <div class="nav-item" data-place="gracanica">Gračanica Monastery</div>
+    <div class="nav-item" data-place="rugova">Rugova Canyon</div>
+    <div class="nav-item" data-place="mirusha">Mirusha Waterfalls</div>
+    <div class="nav-item" data-place="prevalla">Prevalla</div>
+    <div class="nav-item" data-place="brezovica">Brezovica Ski Resort</div>
+    <div class="nav-item" data-place="gadime">Gadime Cave</div>
+    <div class="nav-item" data-place="bear-sanctuary">Bear Sanctuary Prishtina</div>
+    <div class="nav-item" data-place="germia">Germia Park</div>
+    <div class="nav-item" data-place="ulpiana">Ulpiana</div>
+    <div class="nav-item" data-place="white-drin">White Drin Waterfall</div>
+    <div class="nav-divider"></div>
+    <a href="/" class="nav-home-link">← All Countries</a>
+  </nav>
+
+  <!-- ═══ Side Detail Panel ═══ -->
+  <div class="side-panel" id="sidePanel">
+    <button class="side-panel-close" id="sidePanelClose" aria-label="Close">&times;</button>
+    <div id="sidePanelContent"></div>
+  </div>
+
+  <!-- ═══ Main Content ═══ -->
+  <main class="main-container">
+    <section class="hero-section glass">
+      <h2 class="hero-title">Discover Kosovo</h2>
+      <p class="hero-description">
+        A young nation with an ancient soul — Kosovo captivates with medieval Serbian monasteries, Ottoman-era bazaars, rugged alpine peaks, and the warm hospitality of the youngest country in the Balkans.
+      </p>
+    </section>
+
+    <section class="getting-there-section glass">
+      <h3 class="section-title">Getting There</h3>
+      <div class="getting-there-content">
+        <div class="airports-info">
+          <h4>✈️ Main Airport</h4>
+          <ul>
+            <li><strong>Pristina International Airport (PRN)</strong> - The main gateway, 15km from capital</li>
+            <li><strong>Skopje Airport (SKP)</strong> - In North Macedonia, 90km from Pristina</li>
+            <li><strong>Tirana Airport (TIA)</strong> - In Albania, 140km from Prizren</li>
+          </ul>
+        </div>
+        <div class="airfare-links">
+          <h4>🔍 Book Your Flight</h4>
+          <p class="airfare-subtitle">Compare prices and find the best deals</p>
+          <div class="airfare-buttons">
+            <a href="https://www.skyscanner.net/" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">✈️</span>
+              <span class="airfare-name">Skyscanner</span>
+              <span class="airfare-tag">Compare</span>
+            </a>
+            <a href="https://www.kiwi.com/" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">🌍</span>
+              <span class="airfare-name">Kiwi</span>
+              <span class="airfare-tag">Budget</span>
+            </a>
+            <a href="https://www.google.com/travel/flights" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">🔍</span>
+              <span class="airfare-name">Google Flights</span>
+              <span class="airfare-tag">Search</span>
+            </a>
+            <a href="https://www.expedia.com/Flights" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">🏨</span>
+              <span class="airfare-name">Expedia</span>
+              <span class="airfare-tag">Packages</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section glass">
+      <h3 class="map-title">Interactive Tourism Map</h3>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <!-- ═══ Scripts ═══ -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="/js/monetization-config.js"></script>
+  <script src="js/monetization.js"></script>
+  <script src="/js/analytics-init.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/country.js"></script>
+</body>
+</html>

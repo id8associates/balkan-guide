@@ -1,0 +1,12 @@
+# Cloudflare Pages Redirects
+# Pretty URLs — rewrite to country page paths (200 = internal rewrite, not redirect)
+/albania                        /countries/albania/index.html              200
+/bosnia-herzegovina             /countries/bosnia-herzegovina/index.html   200
+/bulgaria                       /countries/bulgaria/index.html             200
+/croatia                        /countries/croatia/index.html              200
+/kosovo                         /countries/kosovo/index.html               200
+/montenegro                     /countries/montenegro/index.html           200
+/north-macedonia                /countries/north-macedonia/index.html      200
+/romania                        /countries/romania/index.html              200
+/serbia                         /countries/serbia/index.html               200
+/slovenia                       /countries/slovenia/index.html             200

@@ -1,0 +1,24 @@
+# Cloudflare Pages Headers
+# Security headers for all pages
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(self), camera=(), microphone=(), payment=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://www.googletagmanager.com https://www.clarity.ms https://scripts.clarity.ms https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.tile.openstreetmap.org https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://*.tile.openstreetmap.org https://www.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms; frame-ancestors 'self'; base-uri 'self'; form-action 'self'
+
+# Image caching — 30 days, immutable
+/countries/*/images/*
+  Cache-Control: public, immutable, max-age=2592000
+/flags/*
+  Cache-Control: public, immutable, max-age=2592000
+
+# CSS/JS caching — 7 days
+/css/*
+  Cache-Control: public, max-age=604800
+/js/*
+  Cache-Control: public, max-age=604800
+/countries/*/css/*
+  Cache-Control: public, max-age=604800
+/countries/*/js/*
+  Cache-Control: public, max-age=604800

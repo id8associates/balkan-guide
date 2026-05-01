@@ -1,0 +1,18 @@
+/* ============================================================
+   Slovenia — Country-specific CSS overrides
+   ============================================================ */
+
+:root {
+  --country-accent: #E41A1C; /* Slovenia flag red */
+}
+
+.hero-title {
+  background: linear-gradient(135deg, #E41A1C, #005CE6, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.custom-marker {
+  background: linear-gradient(135deg, #E41A1C, var(--accent));
+}

@@ -1,0 +1,12 @@
+/**
+ * Croatia — Country-Specific Styles
+ * Override global styles here as needed
+ */
+
+/* Croatia-specific color overrides */
+:root {
+  --country-primary: #17007d;
+  --country-secondary: #ff0000;
+}
+
+/* Add any Croatia-specific styles here */

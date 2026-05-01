@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover {COUNTRY_NAME} — Balkan Tourism</title>
+  <meta name="description" content="Explore {COUNTRY_NAME} — {SHORT_DESCRIPTION}. Discover top destinations, restaurants, and hidden gems.">
+  <link rel="canonical" href="/{COUNTRY_SLUG}">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+  <!-- Global Shared CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <!-- Country-specific CSS overrides -->
+  <link rel="stylesheet" href="css/country.css">
+</head>
+<body>
+
+  <!-- ═══ Header ═══ -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="flag-container" aria-label="Balkan Tourism Home">
+        <!-- REPLACE: Add country flag SVG or <img> here -->
+        <img src="images/flag.svg" alt="{COUNTRY_NAME} flag">
+      </a>
+      <div>
+        <a href="/" class="site-title">Balkan Tourism <span class="country-name">· {COUNTRY_NAME}</span></a>
+        <p class="site-subtitle">{COUNTRY_TAGLINE}</p>
+      </div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep">›</span>
+        <span class="current">{COUNTRY_NAME}</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══ Hamburger Menu ═══ -->
+  <button class="hamburger-menu" id="hamburgerMenu" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- ═══ Navigation Slide-Out ═══ -->
+  <nav class="nav-menu" id="navMenu">
+    <h3>Destinations</h3>
+    <!-- REPLACE: Add nav-item divs for each destination -->
+    <!-- Example: -->
+    <!-- <div class="nav-item" data-place="place-id">Place Name</div> -->
+    <div class="nav-divider"></div>
+    <a href="/" class="nav-home-link">← All Countries</a>
+  </nav>
+
+  <!-- ═══ Side Detail Panel ═══ -->
+  <div class="side-panel" id="sidePanel">
+    <button class="side-panel-close" id="sidePanelClose" aria-label="Close">&times;</button>
+    <div id="sidePanelContent"></div>
+  </div>
+
+  <!-- ═══ Main Content ═══ -->
+  <main class="main-container">
+    <section class="hero-section glass">
+      <h2 class="hero-title">Discover {COUNTRY_NAME}</h2>
+      <p class="hero-description">
+        {HERO_DESCRIPTION}
+      </p>
+    </section>
+
+    <section class="map-section glass">
+      <h3 class="map-title">Interactive Tourism Map</h3>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <!-- ═══ Scripts ═══ -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="/js/global.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/country.js"></script>
+</body>
+</html>

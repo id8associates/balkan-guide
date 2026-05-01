@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-result {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        h1 {
+            color: #333;
+        }
+        .status {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Analytics Connectivity Test</h1>
+
+    <div id="results"></div>
+
+    <script>
+        const results = document.getElementById('results');
+
+        function addResult(message, type) {
+            const div = document.createElement('div');
+            div.className = `test-result ${type}`;
+            div.innerHTML = message;
+            results.appendChild(div);
+        }
+
+        function testConnection(url, name) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                const startTime = Date.now();
+
+                img.onload = () => {
+                    const duration = Date.now() - startTime;
+                    resolve({ success: true, duration, name });
+                };
+
+                img.onerror = () => {
+                    resolve({ success: false, name });
+                };
+
+                img.src = url + '?t=' + Date.now();
+            });
+        }
+
+        async function runTests() {
+            addResult('Starting connectivity tests...', 'info');
+
+            // Test Google Analytics
+            try {
+                const script = document.createElement('script');
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-PPZJEL0K68';
+                script.onload = () => addResult('✅ Google Analytics: Script loaded successfully', 'success');
+                script.onerror = () => addResult('❌ Google Analytics: Failed to load script', 'error');
+                document.head.appendChild(script);
+            } catch (e) {
+                addResult('❌ Google Analytics: ' + e.message, 'error');
+            }
+
+            // Test Microsoft Clarity
+            try {
+                const script = document.createElement('script');
+                script.src = 'https://www.clarity.ms/tag/wk1ffzot4n';
+                script.onload = () => addResult('✅ Microsoft Clarity: Script loaded successfully', 'success');
+                script.onerror = () => addResult('❌ Microsoft Clarity: Failed to load script', 'error');
+                document.head.appendChild(script);
+            } catch (e) {
+                addResult('❌ Microsoft Clarity: ' + e.message, 'error');
+            }
+
+            // Test basic connectivity
+            addResult('Testing basic connectivity to analytics domains...', 'info');
+
+            const gaTest = await testConnection('https://www.google-analytics.com/collect', 'Google Analytics');
+            if (gaTest.success) {
+                addResult(`✅ Google Analytics: Connected (${gaTest.duration}ms)`, 'success');
+            } else {
+                addResult('❌ Google Analytics: Connection failed', 'error');
+            }
+
+            const clarityTest = await testConnection('https://www.clarity.ms/tag', 'Microsoft Clarity');
+            if (clarityTest.success) {
+                addResult(`✅ Microsoft Clarity: Connected (${clarityTest.duration}ms)`, 'success');
+            } else {
+                addResult('❌ Microsoft Clarity: Connection failed', 'error');
+            }
+
+            // Browser info
+            addResult(`
+                <strong>Browser Info:</strong><br>
+                User Agent: ${navigator.userAgent}<br>
+                Cookies Enabled: ${navigator.cookieEnabled}<br>
+                Do Not Track: ${navigator.doNotTrack || 'Not set'}
+            `, 'info');
+
+            // Check for common blockers
+            const hasAdBlocker = !window.ga || !window.clarity;
+            if (hasAdBlocker) {
+                addResult('⚠️ Possible ad blocker detected - analytics scripts may be blocked', 'error');
+            }
+        }
+
+        // Run tests after a short delay
+        setTimeout(runTests, 100);
+    </script>
+</body>
+</html>

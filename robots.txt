@@ -1,0 +1,9 @@
+# Balkan Tourism — robots.txt
+User-agent: *
+Allow: /
+Disallow: /security/
+Disallow: /404.html
+Disallow: /429.html
+Disallow: /500.html
+
+Sitemap: /sitemap.xml

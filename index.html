@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balkan Tourism — Discover the Heart of Southeast Europe</title>
+  <meta name="description" content="Explore the Balkans — ancient bridges, stunning coastlines, mountain adventures, and rich cultural heritage across 10 countries.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Global Shared CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <style>
+  /* ─── Homepage-specific styles ─── */
+  .hero-home {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-home .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-home .hero-description {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.9;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgba(0, 212, 170, 0.15), rgba(168, 85, 247, 0.15));
+    border: 1px solid rgba(0, 212, 170, 0.3);
+    color: var(--primary);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  /* ─── Country Grid ─── */
+  .countries-section {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 3rem;
+    font-size: 1rem;
+  }
+
+  .countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .country-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 212, 170, 0.15);
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .country-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 212, 170, 0.4);
+    box-shadow: 0 20px 60px rgba(0, 212, 170, 0.15);
+  }
+
+  .country-card-flag {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+.country-card-flag img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: relative;
+z-index: 1;
+}
+
+  .country-card-body {
+    padding: 20px;
+  }
+
+  .country-card-name {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .country-card-tagline {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
+  .country-card-stats {
+    display: flex;
+    gap: 16px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .country-card-stats span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .country-card .arrow {
+    position: absolute;
+    top: 20px; right: 20px;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .country-card:hover .arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .card-coming-soon {
+    opacity: 0.55;
+  }
+
+  .card-coming-soon:hover {
+    transform: none;
+    border-color: rgba(0, 212, 170, 0.15);
+    box-shadow: none;
+  }
+
+  .card-coming-soon .country-card-body::after {
+    content: 'Coming Soon';
+    display: block;
+    margin-top: 12px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.8rem;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ─── Footer ─── */
+  .site-footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(0, 212, 170, 0.1);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+  }
+
+  .site-footer a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .site-footer a:hover { text-decoration: underline; }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 768px) {
+    .hero-home .hero-title { font-size: 2.2rem; }
+    .hero-home .hero-description { font-size: 1rem; }
+    .countries-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .countries-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ Header ═══ -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="flag-container" aria-label="Balkan Tourism Home">
+        <svg width="44" height="31" viewBox="0 0 44 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="44" height="31" rx="4" fill="url(#hgrad)"/>
+          <circle cx="22" cy="15.5" r="9" fill="none" stroke="white" stroke-width="1.5" opacity="0.9"/>
+          <path d="M22 10v11M16.5 15.5h11" stroke="white" stroke-width="1.5" opacity="0.9"/>
+          <path d="M22 6.5L20 9h4L22 6.5z" fill="white" opacity="0.9"/>
+          <path d="M22 24.5l2-2.5h-4l2 2.5z" fill="white" opacity="0.9"/>
+          <path d="M13 15.5l2.5-2v4l-2.5-2z" fill="white" opacity="0.9"/>
+          <path d="M31 15.5l-2.5-2v4l2.5-2z" fill="white" opacity="0.9"/>
+          <defs>
+            <linearGradient id="hgrad" x1="0" y1="0" x2="44" y2="31">
+              <stop offset="0%" stop-color="#00d4aa"/>
+              <stop offset="100%" stop-color="#a855f7"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </a>
+      <div>
+        <a href="/" class="site-title">Balkan Tourism</a>
+        <p class="site-subtitle">Discover Southeast Europe</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ Main Content ═══ -->
+  <main class="main-container">
+    <section class="hero-home">
+      <div class="hero-badge">✦ 10 COUNTRIES · INFINITE ADVENTURES</div>
+      <h2 class="hero-title">Explore the Balkans</h2>
+      <p class="hero-description">
+        Where empires met, where mountains touch the sea, where ancient bridges span turquoise rivers —
+        discover the most underrated travel destination in Europe.
+      </p>
+    </section>
+
+    <section class="countries-section">
+      <h3 class="section-title">Choose Your Destination</h3>
+      <p class="section-subtitle">Click a country to explore its top destinations, restaurants, and hidden gems</p>
+
+      <div class="countries-grid">
+
+<!-- ═══ 1. Albania ═══ -->
+      <a href="/countries/albania/" class="country-card">
+        <div class="arrow">→</div>
+        <div class="country-card-flag">
+          <img src="/flags/albania.svg" alt="Flag of Albania" loading="lazy">
+        </div>
+        <div class="country-card-body">
+          <h4 class="country-card-name">Albania</h4>
+          <p class="country-card-tagline">Untouched beaches, Ottoman towns, and the Accursed Mountains</p>
+          <div class="country-card-stats">
+            <span>📍 19 Destinations</span>
+            <span>🍽 75+ Restaurants</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ═══ 2. Bosnia & Herzegovina ═══ -->
+      <a href="/countries/bosnia-herzegovina/" class="country-card">
+        <div class="arrow">→</div>
+        <div class="country-card-flag">
+          <img src="/flags/bosnia-herzegovina.svg" alt="Flag of Bosnia Herzegovina" loading="lazy">
+        </div>
+        <div class="country-card-body">
+          <h4 class="country-card-name">Bosnia &amp; Herzegovina</h4>
+          <p class="country-card-tagline">Ancient bridges, Ottoman bazaars, and pristine wilderness in the heart of the Balkans</p>
+          <div class="country-card-stats">
+            <span>📍 19 Destinations</span>
+            <span>🍽 150+ Restaurants</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ═══ 3. Bulgaria ═══ -->
+      <a href="/countries/bulgaria/" class="country-card">
+        <div class="arrow">→</div>
+        <div class="country-card-flag">
+          <img src="/flags/bulgaria.svg" alt="Flag of Bulgaria" loading="lazy">
+        </div>
+        <div class="country-card-body">
+          <h4 class="country-card-name">Bulgaria</h4>
+          <p class="country-card-tagline">Thracian gold, Black Sea resorts, rose valleys, and Cyrillic heritage</p>
+          <div class="country-card-stats">
+            <span>📍 19 Destinations</span>
+            <span>🍽 75+ Restaurants</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ═══ 4. Croatia ═══ -->
+      <a href="/countries/croatia/" class="country-card">
+        <div class="arrow">→</div>
+        <div class="country-card-flag">
+          <img src="/flags/croatia.svg" alt="Flag of Croatia" loading="lazy">
+        </div>
+        <div class="country-card-body">
+          <h4 class="country-card-name">Croatia</h4>
+          <p class="country-card-tagline">Dazzling Adriatic coastline, medieval walled cities, and a thousand islands</p>
+          <div class="country-card-stats">
+            <span>📍 19 Destinations</span>
+            <span>🍽 75+ Restaurants</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ═══ 5. Kosovo ═══ -->
+      <a href="/countries/kosovo/" class="country-card">
+        <div class="arrow">→</div>
+        <div class="country-card-flag">
+          <img src="/flags/kosovo.svg" alt="Flag of Kosovo" loading="lazy">
+        </div>
+        <div class="country-card-body">
+          <h4 class="country-card-name">Kosovo</h4>
+          <p class="country-card-tagline">Young nation with ancient heritage, vibrant cafés, and rugged mountain trails</p>
+          <div class="country-card-stats">
+            <span>📍 19 Destinations</span>
+            <span>🍽 75+ Restaurants</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ═══ 6. Montenegro ═══ -->
+      <a href="/countries/montenegro/" class="country-card">
+        <div class="arrow">→</div>
+        <div class="country-card-flag">
+          <img src="/flags/montenegro.svg" alt="Flag of Montenegro" loading="lazy">
+        </div>
+        <div class="country-card-body">
+          <h4 class="country-card-name">Montenegro</h4>
+          <p class="country-card-tagline">Dramatic fjord-like bays, mountain monasteries, and the wild beauty of the Adriatic</p>
+          <div class="country-card-stats">
+            <span>📍 19 Destinations</span>
+            <span>🍽 75+ Restaurants</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ═══ 7. North Macedonia ═══ -->
+      <a href="/countries/north-macedonia/" class="country-card">
+        <div class="arrow">→</div>
+        <div class="country-card-flag">
+          <img src="/flags/north-macedonia.svg" alt="Flag of North Macedonia" loading="lazy">
+        </div>
+        <div class="country-card-body">
+          <h4 class="country-card-name">North Macedonia</h4>
+          <p class="country-card-tagline">Lake Ohrid's ancient shores, bazaars of Skopje, and mountain monasteries</p>
+          <div class="country-card-stats">
+            <span>📍 19 Destinations</span>
+            <span>🍽 75+ Restaurants</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ═══ 8. Romania ═══ -->
+      <a href="/countries/romania/" class="country-card">
+        <div class="arrow">→</div>
+        <div class="country-card-flag">
+          <img src="/flags/romania.svg" alt="Flag of Romania" loading="lazy">
+        </div>
+        <div class="country-card-body">
+          <h4 class="country-card-name">Romania</h4>
+          <p class="country-card-tagline">Transylvanian castles, painted monasteries, Carpathian wilderness, and Dracula's legend</p>
+          <div class="country-card-stats">
+            <span>📍 19 Destinations</span>
+            <span>🍽 75+ Restaurants</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ═══ 9. Serbia ═══ -->
+      <a href="/countries/serbia/" class="country-card">
+        <div class="arrow">→</div>
+        <div class="country-card-flag">
+          <img src="/flags/serbia.svg" alt="Flag of Serbia" loading="lazy">
+        </div>
+        <div class="country-card-body">
+          <h4 class="country-card-name">Serbia</h4>
+          <p class="country-card-tagline">Vibrant capital nightlife, Orthodox monasteries, and Danube river fortresses</p>
+          <div class="country-card-stats">
+            <span>📍 19 Destinations</span>
+            <span>🍽 75+ Restaurants</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ═══ 10. Slovenia ═══ -->
+      <a href="/countries/slovenia/" class="country-card">
+        <div class="arrow">→</div>
+        <div class="country-card-flag">
+          <img src="/flags/slovenia.svg" alt="Flag of Slovenia" loading="lazy">
+        </div>
+        <div class="country-card-body">
+          <h4 class="country-card-name">Slovenia</h4>
+          <p class="country-card-tagline">Alpine peaks, emerald rivers, Ljubljana's charm, and cave castles</p>
+          <div class="country-card-stats">
+            <span>📍 19 Destinations</span>
+            <span>🍽 75+ Restaurants</span>
+          </div>
+        </div>
+      </a>
+
+      </div>
+    </section>
+
+    <!-- ═══ Footer ═══ -->
+    <footer class="site-footer">
+      <p>© 2026 Balkan Tourism · Built with ❤ for the Balkans</p>
+      <p style="margin-top:8px;">
+        <a href="/countries/albania/">Albania</a> ·
+        <a href="/countries/bosnia-herzegovina/">Bosnia &amp; Herzegovina</a> ·
+        <a href="/countries/bulgaria/">Bulgaria</a> ·
+        <a href="/countries/croatia/">Croatia</a> ·
+        <a href="/countries/kosovo/">Kosovo</a> ·
+        <a href="/countries/montenegro/">Montenegro</a> ·
+        <a href="/countries/north-macedonia/">North Macedonia</a> ·
+        <a href="/countries/romania/">Romania</a> ·
+        <a href="/countries/serbia/">Serbia</a> ·
+        <a href="/countries/slovenia/">Slovenia</a>
+      </p>
+    </footer>
+  </main>
+
+  <!-- Global JS (minimal — no map on homepage) -->
+  <script src="/js/monetization-config.js"></script>
+  <script src="/js/analytics-init.js"></script>
+  <script src="/js/global.js"></script>
+</body>
+</html>

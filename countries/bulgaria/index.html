@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Bulgaria — Balkan Tourism</title>
+  <meta name="description" content="Explore Bulgaria — Thracian treasures, golden beaches, ancient monasteries, dramatic mountain ranges, and the timeless charm of the Balkans.">
+  <link rel="canonical" href="/bulgaria">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+  <!-- Global Shared CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <!-- Country-specific CSS overrides -->
+  <link rel="stylesheet" href="css/country.css">
+</head>
+<body>
+
+  <!-- ═══ Header ═══ -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="flag-container" aria-label="Balkan Tourism Home">
+        <img src="/flags/bulgaria.svg" alt="Flag of Bulgaria" style="height:32px;width:auto;border-radius:4px;">
+      </a>
+      <div>
+        <a href="/" class="site-title">Balkan Tourism <span class="country-name">· Bulgaria</span></a>
+        <p class="site-subtitle">Land of Thracian Gold</p>
+      </div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep">›</span>
+        <span class="current">Bulgaria</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══ Hamburger Menu ═══ -->
+  <button class="hamburger-menu" id="hamburgerMenu" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- ═══ Navigation Slide-Out ═══ -->
+  <nav class="nav-menu" id="navMenu">
+    <h3>Destinations</h3>
+    <div class="nav-item" data-place="sofia">Sofia</div>
+    <div class="nav-item" data-place="plovdiv">Plovdiv</div>
+    <div class="nav-item" data-place="veliko-tarnovo">Veliko Tarnovo</div>
+    <div class="nav-item" data-place="bansko">Bansko</div>
+    <div class="nav-item" data-place="rila-monastery">Rila Monastery</div>
+    <div class="nav-item" data-place="seven-rila-lakes">Seven Rila Lakes</div>
+    <div class="nav-item" data-place="nessebar">Nessebar - Old Town</div>
+    <div class="nav-item" data-place="burgas">Burgas</div>
+    <div class="nav-item" data-place="varna">Varna</div>
+    <div class="nav-item" data-place="sunny-beach">Sunny Beach</div>
+    <div class="nav-item" data-place="sozopol">Sozopol</div>
+    <div class="nav-item" data-place="koprivshtitsa">Koprivshtitsa</div>
+    <div class="nav-item" data-place="belogradchik">Belogradchik Rocks</div>
+    <div class="nav-item" data-place="devetashka-cave">Devetashka Cave</div>
+    <div class="nav-item" data-place="rila-np">Rila National Park</div>
+    <div class="nav-item" data-place="pirin-np">Pirin National Park</div>
+    <div class="nav-item" data-place="melnik">Melnik</div>
+    <div class="nav-item" data-place="madara">Madara Rider</div>
+    <div class="nav-item" data-place="tsarevets">Tsarevets Fortress</div>
+    <div class="nav-divider"></div>
+    <a href="/" class="nav-home-link">← All Countries</a>
+  </nav>
+
+  <!-- ═══ Side Detail Panel ═══ -->
+  <div class="side-panel" id="sidePanel">
+    <button class="side-panel-close" id="sidePanelClose" aria-label="Close">&times;</button>
+    <div id="sidePanelContent"></div>
+  </div>
+
+  <!-- ═══ Main Content ═══ -->
+  <main class="main-container">
+    <section class="hero-section glass">
+      <h2 class="hero-title">Discover Bulgaria</h2>
+      <p class="hero-description">
+        Where ancient Thracian gold glimmers beneath snow-capped mountains, Roman ruins line cobblestone streets, and the Black Sea coast stretches into golden sands — experience the crossroads of civilization in the heart of the Balkans.
+      </p>
+    </section>
+
+    <section class="getting-there-section glass">
+      <h3 class="section-title">Getting There</h3>
+      <div class="getting-there-content">
+        <div class="airports-info">
+          <h4>✈️ Main Airports</h4>
+          <ul>
+            <li><strong>Sofia Airport (SOF)</strong> - The main gateway, 10km from the capital</li>
+            <li><strong>Burgas Airport (BOJ)</strong> - Southern Black Sea gateway</li>
+            <li><strong>Varna Airport (VAR)</strong> - Northern Black Sea gateway</li>
+            <li><strong>Plovdiv Airport (PDV)</strong> - Second largest city, growing hub</li>
+          </ul>
+        </div>
+        <div class="airfare-links">
+          <h4>🔍 Book Your Flight</h4>
+          <p class="airfare-subtitle">Compare prices and find the best deals</p>
+          <div class="airfare-buttons">
+            <a href="https://www.skyscanner.net/" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">✈️</span>
+              <span class="airfare-name">Skyscanner</span>
+              <span class="airfare-tag">Compare</span>
+            </a>
+            <a href="https://www.kiwi.com/" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">🌍</span>
+              <span class="airfare-name">Kiwi</span>
+              <span class="airfare-tag">Budget</span>
+            </a>
+            <a href="https://www.google.com/travel/flights" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">🔍</span>
+              <span class="airfare-name">Google Flights</span>
+              <span class="airfare-tag">Search</span>
+            </a>
+            <a href="https://www.expedia.com/Flights" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">🏨</span>
+              <span class="airfare-name">Expedia</span>
+              <span class="airfare-tag">Packages</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section glass">
+      <h3 class="map-title">Interactive Tourism Map</h3>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <!-- ═══ Scripts ═══ -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="/js/monetization-config.js"></script>
+  <script src="js/monetization.js"></script>
+  <script src="/js/analytics-init.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/country.js"></script>
+</body>
+</html>

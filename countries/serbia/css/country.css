@@ -1,0 +1,18 @@
+/* ============================================================
+   Serbia — Country-specific CSS overrides
+   ============================================================ */
+
+:root {
+  --country-accent: #C6363C; /* Serbia flag red */
+}
+
+.hero-title {
+  background: linear-gradient(135deg, #C6363C, #0C4076, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.custom-marker {
+  background: linear-gradient(135deg, #C6363C, var(--accent));
+}

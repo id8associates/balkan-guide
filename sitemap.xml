@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR_DOMAIN/</loc><priority>1.0</priority></url>
+  <url><loc>https://YOUR_DOMAIN/countries/albania/</loc><priority>0.8</priority></url>
+  <url><loc>https://YOUR_DOMAIN/countries/bosnia-herzegovina/</loc><priority>0.8</priority></url>
+  <url><loc>https://YOUR_DOMAIN/countries/bulgaria/</loc><priority>0.8</priority></url>
+  <url><loc>https://YOUR_DOMAIN/countries/croatia/</loc><priority>0.8</priority></url>
+  <url><loc>https://YOUR_DOMAIN/countries/kosovo/</loc><priority>0.8</priority></url>
+  <url><loc>https://YOUR_DOMAIN/countries/montenegro/</loc><priority>0.8</priority></url>
+  <url><loc>https://YOUR_DOMAIN/countries/north-macedonia/</loc><priority>0.8</priority></url>
+  <url><loc>https://YOUR_DOMAIN/countries/romania/</loc><priority>0.8</priority></url>
+  <url><loc>https://YOUR_DOMAIN/countries/serbia/</loc><priority>0.8</priority></url>
+  <url><loc>https://YOUR_DOMAIN/countries/slovenia/</loc><priority>0.8</priority></url>
+</urlset>

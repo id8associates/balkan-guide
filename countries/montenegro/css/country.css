@@ -1,0 +1,18 @@
+/* ============================================================
+   Montenegro — Country-specific CSS overrides
+   ============================================================ */
+
+:root {
+  --country-accent: #C8102E; /* Montenegro flag red */
+}
+
+.hero-title {
+  background: linear-gradient(135deg, #C8102E, #D4A017, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.custom-marker {
+  background: linear-gradient(135deg, #C8102E, var(--accent));
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Montenegro — Balkan Tourism</title>
+  <meta name="description" content="Explore Montenegro — dramatic fjord-like bays, ancient walled towns, mountain monasteries, and the wild beauty of the Adriatic coast.">
+  <link rel="canonical" href="/montenegro">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+  <!-- Global Shared CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <!-- Country-specific CSS overrides -->
+  <link rel="stylesheet" href="css/country.css">
+</head>
+<body>
+
+  <!-- ═══ Header ═══ -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="flag-container" aria-label="Balkan Tourism Home">
+        <img src="/flags/montenegro.svg" alt="Flag of Montenegro" style="height:32px;width:auto;border-radius:4px;">
+      </a>
+      <div>
+        <a href="/" class="site-title">Balkan Tourism <span class="country-name">· Montenegro</span></a>
+        <p class="site-subtitle">Wild Beauty of the Adriatic</p>
+      </div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep">›</span>
+        <span class="current">Montenegro</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══ Hamburger Menu ═══ -->
+  <button class="hamburger-menu" id="hamburgerMenu" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- ═══ Navigation Slide-Out ═══ -->
+  <nav class="nav-menu" id="navMenu">
+    <h3>Destinations</h3>
+    <div class="nav-item" data-place="kotor">Kotor – Old Town</div>
+    <div class="nav-item" data-place="budva">Budva Riviera</div>
+    <div class="nav-item" data-place="sveti-stefan">Sveti Stefan</div>
+    <div class="nav-item" data-place="perast">Perast</div>
+    <div class="nav-item" data-place="durmitor">Durmitor National Park</div>
+    <div class="nav-item" data-place="tara-canyon">Tara River Canyon</div>
+    <div class="nav-item" data-place="podgorica">Podgorica</div>
+    <div class="nav-item" data-place="bar">Bar – Old Town</div>
+    <div class="nav-item" data-place="ulcinj">Ulcinj</div>
+    <div class="nav-item" data-place="herceg-novi">Herceg Novi</div>
+    <div class="nav-item" data-place="cetinje">Cetinje</div>
+    <div class="nav-item" data-place="ostrog">Ostrog Monastery</div>
+    <div class="nav-item" data-place="biogradska-gora">Biogradska Gora</div>
+    <div class="nav-item" data-place="skadar-lake">Lake Skadar</div>
+    <div class="nav-item" data-place="lovcen">Lovćen National Park</div>
+    <div class="nav-item" data-place="tivat">Tivat – Porto Montenegro</div>
+    <div class="nav-item" data-place="boka">Boka Kotorska Bay</div>
+    <div class="nav-item" data-place="dobra-voda">Dobra Voda</div>
+    <div class="nav-item" data-place="prokletije">Prokletije Mountains</div>
+    <div class="nav-divider"></div>
+    <a href="/" class="nav-home-link">← All Countries</a>
+  </nav>
+
+  <!-- ═══ Side Detail Panel ═══ -->
+  <div class="side-panel" id="sidePanel">
+    <button class="side-panel-close" id="sidePanelClose" aria-label="Close">&times;</button>
+    <div id="sidePanelContent"></div>
+  </div>
+
+  <!-- ═══ Main Content ═══ -->
+  <main class="main-container">
+    <section class="hero-section glass">
+      <h2 class="hero-title">Discover Montenegro</h2>
+      <p class="hero-description">
+        Where dramatic fjord-like bays meet medieval walled towns, black mountain peaks plunge into turquoise waters — experience the wild beauty of the Adriatic's best-kept secret.
+      </p>
+    </section>
+
+    <section class="getting-there-section glass">
+      <h3 class="section-title">Getting There</h3>
+      <div class="getting-there-content">
+        <div class="airports-info">
+          <h4>✈️ Main Airports</h4>
+          <ul>
+            <li><strong>Podgorica Airport (TGD)</strong> - The main gateway, 12km from capital</li>
+            <li><strong>Tivat Airport (TIV)</strong> - Coastal gateway, 5km from Tivat</li>
+            <li><strong>Dubrovnik Airport (DBV)</strong> - Nearby in Croatia, 40km from Herceg Novi</li>
+          </ul>
+        </div>
+        <div class="airfare-links">
+          <h4>🔍 Book Your Flight</h4>
+          <p class="airfare-subtitle">Compare prices and find the best deals</p>
+          <div class="airfare-buttons">
+            <a href="https://www.skyscanner.net/" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">✈️</span>
+              <span class="airfare-name">Skyscanner</span>
+              <span class="airfare-tag">Compare</span>
+            </a>
+            <a href="https://www.kiwi.com/" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">🌍</span>
+              <span class="airfare-name">Kiwi</span>
+              <span class="airfare-tag">Budget</span>
+            </a>
+            <a href="https://www.google.com/travel/flights" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">🔍</span>
+              <span class="airfare-name">Google Flights</span>
+              <span class="airfare-tag">Search</span>
+            </a>
+            <a href="https://www.expedia.com/Flights" target="_blank" rel="noopener noreferrer" class="airfare-button">
+              <span class="airfare-icon">🏨</span>
+              <span class="airfare-name">Expedia</span>
+              <span class="airfare-tag">Packages</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section glass">
+      <h3 class="map-title">Interactive Tourism Map</h3>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <!-- ═══ Scripts ═══ -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="/js/monetization-config.js"></script>
+  <script src="js/monetization.js"></script>
+  <script src="/js/analytics-init.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/country.js"></script>
+</body>
+</html>
