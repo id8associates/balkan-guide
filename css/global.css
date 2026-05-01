@@ -67,6 +67,7 @@ body::before {
   gap: 1rem;
   max-width: var(--max-width);
   margin: 0 auto;
+  padding-right: 70px; /* Space for hamburger menu */
 }
 
 .site-header .flag-container {
@@ -720,6 +721,12 @@ body::before {
 }
 
 /* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .site-header .site-title { font-size: 1.15rem; }
+  .site-header .site-subtitle { font-size: 0.7rem; }
+  .breadcrumb { margin-left: auto; font-size: 0.75rem; }
+}
+
 @media (max-width: 768px) {
   .main-container { padding: 1rem; }
   .hero-title { font-size: 2rem; }
