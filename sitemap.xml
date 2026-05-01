@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://YOUR_DOMAIN/</loc><priority>1.0</priority></url>
-  <url><loc>https://YOUR_DOMAIN/countries/albania/</loc><priority>0.8</priority></url>
-  <url><loc>https://YOUR_DOMAIN/countries/bosnia-herzegovina/</loc><priority>0.8</priority></url>
-  <url><loc>https://YOUR_DOMAIN/countries/bulgaria/</loc><priority>0.8</priority></url>
-  <url><loc>https://YOUR_DOMAIN/countries/croatia/</loc><priority>0.8</priority></url>
-  <url><loc>https://YOUR_DOMAIN/countries/kosovo/</loc><priority>0.8</priority></url>
-  <url><loc>https://YOUR_DOMAIN/countries/montenegro/</loc><priority>0.8</priority></url>
-  <url><loc>https://YOUR_DOMAIN/countries/north-macedonia/</loc><priority>0.8</priority></url>
-  <url><loc>https://YOUR_DOMAIN/countries/romania/</loc><priority>0.8</priority></url>
-  <url><loc>https://YOUR_DOMAIN/countries/serbia/</loc><priority>0.8</priority></url>
-  <url><loc>https://YOUR_DOMAIN/countries/slovenia/</loc><priority>0.8</priority></url>
+  <url><loc>https://balkanguide.net/</loc><priority>1.0</priority></url>
+  <url><loc>https://balkanguide.net/albania</loc><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/bosnia-herzegovina</loc><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/bulgaria</loc><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/croatia</loc><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/kosovo</loc><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/montenegro</loc><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/north-macedonia</loc><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/romania</loc><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/serbia</loc><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/slovenia</loc><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/blog/</loc><priority>0.8</priority></url>
+  <url><loc>https://balkanguide.net/countries/albania/</loc><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/bosnia-herzegovina/</loc><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/bulgaria/</loc><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/croatia/</loc><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/kosovo/</loc><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/montenegro/</loc><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/north-macedonia/</loc><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/romania/</loc><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/serbia/</loc><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/slovenia/</loc><priority>0.7</priority></url>
 </urlset>

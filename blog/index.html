@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balkan Travel Blog — Balkan Guide</title>
+  <meta name="description" content="Expert travel guides, itineraries, and tips for exploring the Balkans. Discover hidden gems, budget advice, and destination deep-dives.">
+  <link rel="canonical" href="/blog/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/global.css">
+  <style>
+    .blog-header { text-align: center; padding: 4rem 2rem 2rem; }
+    .blog-header p { max-width: 600px; margin: 1rem auto; color: rgba(255,255,255,0.6); }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; padding: 2rem; max-width: var(--max-width); margin: 0 auto; }
+    .blog-card { background: var(--glass); border: 1px solid rgba(0,212,170,0.15); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; text-decoration: none; color: inherit; display: block; }
+    .blog-card:hover { transform: translateY(-6px); border-color: rgba(0,212,170,0.4); box-shadow: 0 20px 60px rgba(0,212,170,0.15); }
+    .blog-card-body { padding: 24px; }
+    .blog-card-category { display: inline-block; padding: 4px 12px; border-radius: 12px; background: rgba(0,212,170,0.15); color: var(--primary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .blog-card h3 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 10px; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .blog-card-excerpt { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.6; margin-bottom: 14px; }
+    .blog-card-meta { color: rgba(255,255,255,0.4); font-size: 0.8rem; }
+    @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="flag-container" aria-label="Balkan Guide Home">
+        <svg width="44" height="31" viewBox="0 0 44 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="44" height="31" rx="4" fill="url(#bgrad)"/>
+          <circle cx="22" cy="15.5" r="9" fill="none" stroke="white" stroke-width="1.5" opacity="0.9"/>
+          <path d="M22 10v11M16.5 15.5h11" stroke="white" stroke-width="1.5" opacity="0.9"/>
+          <path d="M22 6.5L20 9h4L22 6.5z" fill="white" opacity="0.9"/>
+          <path d="M22 24.5l2-2.5h-4l2 2.5z" fill="white" opacity="0.9"/>
+          <path d="M13 15.5l2.5-2v4l-2.5-2z" fill="white" opacity="0.9"/>
+          <path d="M31 15.5l-2.5-2v4l2.5-2z" fill="white" opacity="0.9"/>
+          <defs><linearGradient id="bgrad" x1="0" y1="0" x2="44" y2="31"><stop offset="0%" stop-color="#00d4aa"/><stop offset="100%" stop-color="#a855f7"/></linearGradient></defs>
+        </svg>
+      </a>
+      <div>
+        <a href="/" class="site-title">Balkan Guide <span class="country-name">· Blog</span></a>
+        <p class="site-subtitle">Travel Tips & Guides</p>
+      </div>
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep">›</span>
+        <span class="current">Blog</span>
+      </nav>
+    </div>
+  </header>
+
+  <button class="hamburger-menu" id="hamburgerMenu" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="nav-menu" id="navMenu">
+    <h3>Explore</h3>
+    <a href="/" class="nav-home-link" style="display:block;padding:12px 16px;border-radius:12px;color:var(--accent);text-decoration:none;">← All Countries</a>
+    <div class="nav-divider"></div>
+    <h3 style="color:var(--primary);margin-bottom:16px;font-family:var(--font-display);font-size:1.2rem;text-transform:uppercase;letter-spacing:2px;">Destinations</h3>
+    <a href="/albania" class="nav-item" style="display:block;padding:12px 16px;margin:8px 0;border-radius:12px;color:rgba(255,255,255,0.8);text-decoration:none;border:1px solid transparent;background:rgba(255,255,255,0.02);">Albania</a>
+    <a href="/bosnia-herzegovina" class="nav-item" style="display:block;padding:12px 16px;margin:8px 0;border-radius:12px;color:rgba(255,255,255,0.8);text-decoration:none;border:1px solid transparent;background:rgba(255,255,255,0.02);">Bosnia & Herzegovina</a>
+    <a href="/bulgaria" class="nav-item" style="display:block;padding:12px 16px;margin:8px 0;border-radius:12px;color:rgba(255,255,255,0.8);text-decoration:none;border:1px solid transparent;background:rgba(255,255,255,0.02);">Bulgaria</a>
+    <a href="/croatia" class="nav-item" style="display:block;padding:12px 16px;margin:8px 0;border-radius:12px;color:rgba(255,255,255,0.8);text-decoration:none;border:1px solid transparent;background:rgba(255,255,255,0.02);">Croatia</a>
+    <a href="/kosovo" class="nav-item" style="display:block;padding:12px 16px;margin:8px 0;border-radius:12px;color:rgba(255,255,255,0.8);text-decoration:none;border:1px solid transparent;background:rgba(255,255,255,0.02);">Kosovo</a>
+    <a href="/montenegro" class="nav-item" style="display:block;padding:12px 16px;margin:8px 0;border-radius:12px;color:rgba(255,255,255,0.8);text-decoration:none;border:1px solid transparent;background:rgba(255,255,255,0.02);">Montenegro</a>
+    <a href="/north-macedonia" class="nav-item" style="display:block;padding:12px 16px;margin:8px 0;border-radius:12px;color:rgba(255,255,255,0.8);text-decoration:none;border:1px solid transparent;background:rgba(255,255,255,0.02);">North Macedonia</a>
+    <a href="/romania" class="nav-item" style="display:block;padding:12px 16px;margin:8px 0;border-radius:12px;color:rgba(255,255,255,0.8);text-decoration:none;border:1px solid transparent;background:rgba(255,255,255,0.02);">Romania</a>
+    <a href="/serbia" class="nav-item" style="display:block;padding:12px 16px;margin:8px 0;border-radius:12px;color:rgba(255,255,255,0.8);text-decoration:none;border:1px solid transparent;background:rgba(255,255,255,0.02);">Serbia</a>
+    <a href="/slovenia" class="nav-item" style="display:block;padding:12px 16px;margin:8px 0;border-radius:12px;color:rgba(255,255,255,0.8);text-decoration:none;border:1px solid transparent;background:rgba(255,255,255,0.02);">Slovenia</a>
+  </nav>
+
+  <main class="main-container">
+    <section class="glass blog-header">
+      <h2 class="hero-title">Balkan Travel Blog</h2>
+      <p>Expert guides, hidden gems, budget tips, and detailed itineraries for every corner of the Balkans.</p>
+    </section>
+
+    <section class="blog-grid">
+      <a href="/blog/balkan-budget-travel" class="blog-card">
+        <div class="blog-card-body">
+          <span class="blog-card-category">Budget Travel</span>
+          <h3>Balkan Budget: How to Travel the Balkans on €40/Day</h3>
+          <p class="blog-card-excerpt">From affordable guesthouses in Bosnia to cheap cevapi in Serbia — here's exactly how much you need to budget for each Balkan country.</p>
+          <p class="blog-card-meta">May 1, 2026 · 8 min read</p>
+        </div>
+      </a>
+
+      <a href="/blog/dubrovnik-vs-kotor" class="blog-card">
+        <div class="blog-card-body">
+          <span class="blog-card-category">Destination Guide</span>
+          <h3>Dubrovnik vs. Kotor: Which Adriatic City Should You Visit?</h3>
+          <p class="blog-card-excerpt">Two stunning walled cities on the Adriatic, but which one is right for your trip? We compare costs, crowds, and experiences.</p>
+          <p class="blog-card-meta">May 1, 2026 · 6 min read</p>
+        </div>
+      </a>
+
+      <a href="/blog/albania-beaches-hidden-gems" class="blog-card">
+        <div class="blog-card-body">
+          <span class="blog-card-category">Hidden Gems</span>
+          <h3>10 Hidden Beaches in Albania Most Tourists Miss</h3>
+          <p class="blog-card-excerpt">Skip the crowded Riviera spots and discover secluded coves, turquoise waters, and untouched coastline along the Albanian Riviera.</p>
+          <p class="blog-card-meta">May 1, 2026 · 7 min read</p>
+        </div>
+      </a>
+
+      <a href="/blog/balkan-road-trip-itinerary" class="blog-card">
+        <div class="blog-card-body">
+          <span class="blog-card-category">Itinerary</span>
+          <h3>Balkan Road Trip: The Ultimate 21-Day Itinerary</h3>
+          <p class="blog-card-excerpt">Drive from Slovenia to Greece through all 10 Balkan countries. Includes routes, border tips, and the best stops along the way.</p>
+          <p class="blog-card-meta">May 1, 2026 · 10 min read</p>
+        </div>
+      </a>
+
+      <a href="/blog/balkan-food-guide" class="blog-card">
+        <div class="blog-card-body">
+          <span class="blog-card-category">Food & Drink</span>
+          <h3>Balkan Food Guide: Must-Try Dishes in Every Country</h3>
+          <p class="blog-card-excerpt">From cevapi in Bosnia to burek in Macedonia, seafood in Croatia to qebapa in Kosovo — a food lover's tour of the Balkans.</p>
+          <p class="blog-card-meta">May 1, 2026 · 9 min read</p>
+        </div>
+      </a>
+
+      <a href="/blog/digital-nomad-balkans" class="blog-card">
+        <div class="blog-card-body">
+          <span class="blog-card-category">Digital Nomad</span>
+          <h3>Digital Nomad Guide to the Balkans: Best Cities for Remote Work</h3>
+          <p class="blog-card-excerpt">Fast WiFi, affordable living, and vibrant café culture — the Balkans are Europe's most underrated digital nomad destination.</p>
+          <p class="blog-card-meta">May 1, 2026 · 8 min read</p>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer" style="text-align:center;padding:3rem 2rem;margin-top:4rem;border-top:1px solid rgba(0,212,170,0.1);color:rgba(255,255,255,0.4);font-size:0.85rem;">
+    <p>© 2026 Balkan Guide · Built with ❤ for the Balkans</p>
+  </footer>
+
+  <script src="/js/global.js"></script>
+</body>
+</html>
