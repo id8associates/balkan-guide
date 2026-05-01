@@ -724,7 +724,7 @@ body::before {
 @media (max-width: 1024px) {
   .site-header .site-title { font-size: 1.15rem; }
   .site-header .site-subtitle { font-size: 0.7rem; }
-  .breadcrumb { margin-left: auto; font-size: 0.75rem; }
+  .breadcrumb { display: none; }
 }
 
 @media (max-width: 768px) {
