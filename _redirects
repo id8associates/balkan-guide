@@ -11,11 +11,5 @@
 /serbia                         /countries/serbia/index.html               200
 /slovenia                       /countries/slovenia/index.html             200
 
-# Blog
+# Blog — Cloudflare auto-strips .html, no redirect needed
 /blog                           /blog/index.html                           200
-/blog/balkan-budget-travel      /blog/balkan-budget-travel.html            200
-/blog/dubrovnik-vs-kotor        /blog/dubrovnik-vs-kotor.html              200
-/blog/albania-beaches-hidden-gems /blog/albania-beaches-hidden-gems.html   200
-/blog/balkan-road-trip-itinerary /blog/balkan-road-trip-itinerary.html     200
-/blog/balkan-food-guide         /blog/balkan-food-guide.html               200
-/blog/digital-nomad-balkans     /blog/digital-nomad-balkans.html           200
