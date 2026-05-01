@@ -23,3 +23,7 @@ gen_images*.py
 
 # SSL certs (for local dev only)
 security/
+
+# Download scripts (leftovers)
+*download_images*
+*replace_images*
