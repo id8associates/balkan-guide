@@ -1,5 +1,6 @@
 /**
  * Balkan Guide — Global Monetization Configuration
+ * Clarity: wkvqry8s7l | Updated: 2026-05-02
  * 
  * This file contains all monetization settings that apply across all countries.
  * Each country can override these settings in their country-specific monetization.js
