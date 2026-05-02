@@ -95,7 +95,7 @@ const MONETIZATION_CONFIG = {
     },
     microsoftClarity: {
       enabled: true,
-      projectId: 'wk1ffzot4n' // Replace with your actual project ID
+      projectId: 'wkvqry8s7l' // Microsoft Clarity project ID
     },
     affiliateTracking: {
       enabled: true
