@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://balkanguide.net/</loc><priority>1.0</priority></url>
-  <url><loc>https://balkanguide.net/albania</loc><priority>0.9</priority></url>
-  <url><loc>https://balkanguide.net/bosnia-herzegovina</loc><priority>0.9</priority></url>
-  <url><loc>https://balkanguide.net/bulgaria</loc><priority>0.9</priority></url>
-  <url><loc>https://balkanguide.net/croatia</loc><priority>0.9</priority></url>
-  <url><loc>https://balkanguide.net/kosovo</loc><priority>0.9</priority></url>
-  <url><loc>https://balkanguide.net/montenegro</loc><priority>0.9</priority></url>
-  <url><loc>https://balkanguide.net/north-macedonia</loc><priority>0.9</priority></url>
-  <url><loc>https://balkanguide.net/romania</loc><priority>0.9</priority></url>
-  <url><loc>https://balkanguide.net/serbia</loc><priority>0.9</priority></url>
-  <url><loc>https://balkanguide.net/slovenia</loc><priority>0.9</priority></url>
-  <url><loc>https://balkanguide.net/blog/</loc><priority>0.8</priority></url>
-  <url><loc>https://balkanguide.net/countries/albania/</loc><priority>0.7</priority></url>
-  <url><loc>https://balkanguide.net/countries/bosnia-herzegovina/</loc><priority>0.7</priority></url>
-  <url><loc>https://balkanguide.net/countries/bulgaria/</loc><priority>0.7</priority></url>
-  <url><loc>https://balkanguide.net/countries/croatia/</loc><priority>0.7</priority></url>
-  <url><loc>https://balkanguide.net/countries/kosovo/</loc><priority>0.7</priority></url>
-  <url><loc>https://balkanguide.net/countries/montenegro/</loc><priority>0.7</priority></url>
-  <url><loc>https://balkanguide.net/countries/north-macedonia/</loc><priority>0.7</priority></url>
-  <url><loc>https://balkanguide.net/countries/romania/</loc><priority>0.7</priority></url>
-  <url><loc>https://balkanguide.net/countries/serbia/</loc><priority>0.7</priority></url>
-  <url><loc>https://balkanguide.net/countries/slovenia/</loc><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/</loc><lastmod>2026-05-02</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
 
-  <url><loc>https://balkanguide.net/blog/balkan-budget-travel</loc><priority>0.6</priority></url>
-  <url><loc>https://balkanguide.net/blog/dubrovnik-vs-kotor</loc><priority>0.6</priority></url>
-  <url><loc>https://balkanguide.net/blog/albania-beaches-hidden-gems</loc><priority>0.6</priority></url>
-  <url><loc>https://balkanguide.net/blog/balkan-road-trip-itinerary</loc><priority>0.6</priority></url>
-  <url><loc>https://balkanguide.net/blog/balkan-food-guide</loc><priority>0.6</priority></url>
-  <url><loc>https://balkanguide.net/blog/digital-nomad-balkans</loc><priority>0.6</priority></url>
-  <url><loc>https://balkanguide.net/blog/bosnia-7-day-itinerary</loc><priority>0.6</priority></url>
-  <url><loc>https://balkanguide.net/blog/croatia-7-day-itinerary</loc><priority>0.6</priority></url>
-  <url><loc>https://balkanguide.net/blog/montenegro-5-day-itinerary</loc><priority>0.6</priority></url>
-  <url><loc>https://balkanguide.net/blog/slovenia-5-day-itinerary</loc><priority>0.6</priority></url>
-  <url><loc>https://balkanguide.net/blog/serbia-3-day-itinerary</loc><priority>0.6</priority></url>
+  <!-- Country Landing Pages (via redirect) -->
+  <url><loc>https://balkanguide.net/albania</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/bosnia-herzegovina</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/bulgaria</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/croatia</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/kosovo</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/montenegro</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/north-macedonia</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/romania</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/serbia</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://balkanguide.net/slovenia</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Direct Country Pages -->
+  <url><loc>https://balkanguide.net/countries/albania/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/bosnia-herzegovina/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/bulgaria/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/croatia/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/kosovo/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/montenegro/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/north-macedonia/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/romania/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/serbia/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://balkanguide.net/countries/slovenia/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Blog -->
+  <url><loc>https://balkanguide.net/blog/</loc><lastmod>2026-05-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://balkanguide.net/blog/balkan-budget-travel</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://balkanguide.net/blog/dubrovnik-vs-kotor</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://balkanguide.net/blog/albania-beaches-hidden-gems</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://balkanguide.net/blog/balkan-road-trip-itinerary</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://balkanguide.net/blog/balkan-food-guide</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://balkanguide.net/blog/digital-nomad-balkans</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://balkanguide.net/blog/bosnia-7-day-itinerary</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://balkanguide.net/blog/croatia-7-day-itinerary</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://balkanguide.net/blog/montenegro-5-day-itinerary</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://balkanguide.net/blog/slovenia-5-day-itinerary</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://balkanguide.net/blog/serbia-3-day-itinerary</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
